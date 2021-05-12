@@ -15,6 +15,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import ni.edu.uni.fcys.programacion2.simulacionexamen.pojo.EnumTipoActivo;
+import ni.edu.uni.fcys.programacion2.simulacionexamen.pojo.TipoActivoPojo;
 
 /**
  * FXML Controller class
@@ -24,7 +25,7 @@ import ni.edu.uni.fcys.programacion2.simulacionexamen.pojo.EnumTipoActivo;
 public class ActivoFXMLController implements Initializable {
 
     @FXML
-    public TableView<?> tblView;
+    public TableView<TipoActivoPojo> tblView;
     @FXML
     public Button btnCalcular;
     @FXML
@@ -46,6 +47,15 @@ public class ActivoFXMLController implements Initializable {
 
     @FXML
     public void btnCalcularAction(ActionEvent event) {
+        //Valores que neesita el pojo
+        String nombre = txtNombre.getText();
+        float valorActivo = Float.parseFloat(txtValorActivo.getText());
+        EnumTipoActivo tipoActivo = cmbTipoActivo.getValue();
+        float valorSalvamento = Float.parseFloat(txtValorSalvado.getText());
+        
+        TableView<TipoActivoPojo>tblView = new TableView<>();
+        
+        
         
     }
     
